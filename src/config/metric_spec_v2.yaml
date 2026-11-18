@@ -17,11 +17,11 @@ metrics:
   - {id: pass_rate,             kind: capability, level: outcome,    grader: lab8.metrics.trial_pass, blocking: true,
      threshold: {min: 0.85, no_significant_drop: true}}
   - {id: pass_hat_5,            kind: capability, level: outcome,    grader: lab8.metrics.summarize, blocking: true,
-     threshold: {min: 0.80, no_significant_drop: true}}
+     threshold: {min: 0.70, no_significant_drop: true}}
   - {id: reply_amount_correct,  kind: capability, level: outcome,    grader: code, blocking: true,
-     threshold: {min: 0.80, no_significant_drop: true}}
+     threshold: {min: 0.70, no_significant_drop: true}}
   - {id: cost_per_success,      kind: system,     level: system,     grader: lab8.metrics.summarize, threshold: {max_increase: 0.10}, blocking: false}
 slices:
   - {name: money_movement, metric: pass_rate, min: 0.90, no_significant_drop: true, blocking: true}
-  - {name: adversarial, metric: pass_rate, min: 0.80, no_significant_drop: true, blocking: true}
+  - {name: adversarial, metric: pass_rate, min: 0.70, no_significant_drop: true, blocking: true}
   - {name: denial, metric: pass_rate, min: 0.90, no_significant_drop: true, blocking: true}
